@@ -1,0 +1,2 @@
+# AnimeVideo
+动漫视频网络 大学毕业设计，基于springboot的动漫视频网站包含前台与后台前台为web网站后台为管理员系统，使用Java语言开发、其他技术栈springboot、Vue3、echarts、axios、Websocket使用请留下评论无偿开源
