@@ -1,0 +1,68 @@
+<header class="header style-1">
+    <div class="container">
+        <!-- Start Mainmenu Nav -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="home.html"><img src="/html/assets/media/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto mainmenu">
+                    <li class="menu-item-has-children">
+                        <a href="home.html" :class="{ 'active': currentMenu === 'home' }">动漫番剧</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="./home-2.html" :class="{ 'active': currentMenu === 'movie' }">动漫电影</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="./blog.html" :class="{ 'active': currentMenu === 'blog' }">圈子</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#Pages" class="dropdown-toggle" id="pages" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" aria-expanded="false">其他</a>
+                        <ul class="dropdown-menu" aria-labelledby="pages">
+                            <!-- <li>
+                                <a href="./privacy.html" :class="{ 'active': currentMenu === 'privacy' }">隐私协议</a>
+                            </li>
+                            <li>
+                                <a href="./comments.html" :class="{ 'active': currentMenu === 'comment' }">公共政策</a>
+                            </li> -->
+                            <li v-if="isLogin">
+                                <a href="./edit-profile.html" :class="{ 'active': currentMenu === 'profile' }">信息编辑</a>
+                            </li>
+                            <li>
+                                <a href="./watch-history.html" :class="{ 'active': currentMenu === 'history' }">观看历史</a>
+                            </li>
+                            <li>
+                                <a href="./login.html" :class="{ 'active': currentMenu === 'login' }">登录</a>
+                            </li>
+                            <li>
+                                <a href="./signup.html" :class="{ 'active': currentMenu === 'register' }">注册</a>
+                            </li>
+                            <li v-if="isLogin">
+                                <a href="./reset-password.html" :class="{ 'active': currentMenu === 'reset' }">修改密码</a>
+                            </li>
+                            <!-- <li>
+                                <a href="./404.html" :class="{ 'active': currentMenu === '404' }">404</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                </ul>
+                <form action="./grid-view.html">
+                    <div class="input-group form-group header-search-box">
+                        <button class="input-group-text anime-btn" type="submit"><i class="fal fa-search"></i></button>
+                        <input class="form-control" name="title" type="text" placeholder="Search">
+                    </div>
+                </form>
+                <div class="d-flex right-nav">
+                    <a href="./signup.html" class="anime-btn2 light me-3" v-if="!isLogin">注册</a>
+                    <a href="./login.html" class="anime-btn2 dark" v-if="!isLogin">登录</a>
+                    <a href="./profile.html" v-if="isLogin">
+                        <img :src="imageUrl" style="width: 37px;height: 37px;margin-right: 91px;border-radius: 4px;"
+                            alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
